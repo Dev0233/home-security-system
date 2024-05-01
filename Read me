@@ -1,0 +1,63 @@
+Introduction:
+Welcome to the 4-Layer Security System ReadMe! This document serves as a guide for setting up a robust security system utilizing multiple layers of authentication.
+This system integrates a password, OTP (One-Time Password), RFID (Radio-Frequency Identification), and fingerprint recognition for enhanced security.
+The system is built using ESP32 microcontroller, buzzer, RFID module, relay, R307 fingerprint sensor, OLED display, and a 12V BMS (Battery Management System).
+
+Components:
+ESP32 Microcontroller: The core of the system, responsible for managing all the components and executing the security protocols.
+Buzzer: Used for audible feedback during authentication processes and alerting for unauthorized access attempts.
+RFID Module: Utilized for RFID card-based authentication.
+Relay: Controls the access to the secured area, allowing entry upon successful authentication.
+R307 Fingerprint Sensor: Enables fingerprint-based authentication, adding an extra layer of security.
+OLED Display: Provides visual feedback and instructions during the authentication process.
+12V BMS: Powers the system and ensures stable operation.
+
+Installation:
+Hardware Setup:
+Connect the components as per the schematic diagram provided with this ReadMe.
+Ensure all connections are secure and there are no loose connections.
+
+Software Installation:
+Install the necessary libraries for ESP32, RFID module, OLED display, and fingerprint sensor in your Arduino IDE.
+Download the code provided in the repository and upload it to your ESP32 board.
+Customize the code according to your requirements, such as defining authorized users, setting up passwords, OTPs, etc.
+
+Usage:
+Power On:
+Connect the 12V BMS to power on the system.
+Wait for the system to initialize.
+
+Authentication Process:
+Approach the security system.
+Input the password through the keypad provided in the system. This is the first layer of authentication.
+Upon successful password entry, the system will prompt for an OTP.
+Enter the OTP received on your registered device. This is the second layer of authentication.
+If the OTP is verified(by blynk app), the system will request RFID authentication.
+Present your RFID card/tag to the RFID module.This is the third layer of authentication.
+Finally, place your finger on the fingerprint sensor. This is the fourth layer of authentication.
+If all authentication layers pass successfully, the relay will be triggered, allowing access to the secured area.
+
+Access Granted / Denied:
+If access is granted, the buzzer will emit a confirmation sound.
+If any authentication layer fails, the buzzer will emit an alert sound, and access will be denied.
+
+OLED Display:
+The OLED display will provide visual feedback during the authentication process, guiding the user through each step and displaying status messages.
+
+Maintenance:
+Regularly check the connections and components for any signs of damage or malfunction.
+Update the authorized user database and security protocols as required.
+Ensure the system software is up-to-date with the latest security patches and improvements.
+
+Disclaimer:
+This security system is designed to enhance security but may not be foolproof. It is recommended to use it in conjunction with other security measures.
+The system owner is responsible for ensuring compliance with local regulations and laws regarding the use of security systems.
+
+Troubleshooting:
+Refer to the troubleshooting section in the provided documentation for common issues and their solutions.
+For further assistance, contact the support team or consult the online community forums for ESP32 and Arduino.
+
+Feedback:
+Your feedback is valuable for improving this security system. If you have any suggestions or encounter any issues, please feel free to reach out to the development team.
+
+Thank you for choosing our 4-Layer Security System!
